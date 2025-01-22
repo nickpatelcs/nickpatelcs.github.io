@@ -41,7 +41,7 @@ p {
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: rgba(0,0,0,0);
+  background-color: black;
   color: white;
   font-weight: bold;
   text-decoration: none;
