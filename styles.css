@@ -37,6 +37,13 @@ p {
   margin-bottom: 15px;
 }
 
+.button-container {
+  width: 800px;
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  margin: 0 auto; /* Centers the container itself if needed */
+}
+
 .cta-button {
   display: inline-block;
   margin-top: 20px;
@@ -46,7 +53,7 @@ p {
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  border: 2px solid white; /* Added border property */
+  border: 2px solid white;
   transition: background-color 0.3s;
 }
 
