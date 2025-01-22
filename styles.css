@@ -37,11 +37,14 @@ p {
   margin-bottom: 15px;
 }
 
-.button-container {
+.left-800-wrapper {
   width: 800px;
+  position: relative;
+}
+
+.button-container {
   display: flex;
   justify-content: center; /* Centers the button horizontally */
-  margin: 0 auto; /* Centers the container itself if needed */
 }
 
 .cta-button {
