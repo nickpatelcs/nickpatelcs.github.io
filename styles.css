@@ -10,6 +10,7 @@ body {
   background-color: black;
   color: #efefef;
   line-height: 1.5;
+  font-weight: bold;
   padding: 20px;
   text-align: center;
 }
