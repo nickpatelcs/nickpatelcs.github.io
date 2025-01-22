@@ -46,13 +46,13 @@ p {
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  border-color: white;
+  border: 2px solid white; /* Added border property */
   transition: background-color 0.3s;
 }
 
 .cta-button:hover {
   background-color: white;
-  color: black
+  color: black;
 }
 
 footer {
