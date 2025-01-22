@@ -41,15 +41,16 @@ p {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #28a9e9;
-  color: #fff;
+  color: rgba(0,0,0,0);
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
+  border-color: white;
   transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #217fb5;
+  background-color: white;
 }
 
 footer {
