@@ -1,0 +1,173 @@
+/* Base Reset and Typography */
+body {
+    font-family: 'Inter', sans-serif; /* Use your preferred font */
+    background-color: #1E1E1E; /* Dark Background */
+    color: #F0F0F0; /* Off-White Text */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #F0F0F0;
+    font-weight: 700;
+}
+
+h1 { font-size: 3.5rem; } /* Hero Title */
+h2 { 
+    font-size: 2.2rem; 
+    margin-bottom: 30px;
+    border-bottom: 2px solid #00B9FE; /* Subtle Accent under title */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Layout Utilities */
+.section-padded {
+    padding: 100px 10%; /* Generous padding on all sections */
+    max-width: 1200px;
+    margin: 0 auto; /* Center content */
+}
+
+/* Navigation Bar */
+#navbar {
+    position: sticky;
+    top: 0;
+    background-color: #1E1E1E; /* Same as background or slightly darker */
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+}
+.logo {
+    color: #00B9FE; /* Blue Accent on name */
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+nav a {
+    color: #F0F0F0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #00B9FE;
+}
+
+/* Buttons and Links */
+.primary-button {
+    background-color: #00B9FE;
+    color: #1E1E1E; /* Dark text on bright button */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.primary-button:hover {
+    background-color: #0090C8;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+.secondary-button {
+    background-color: transparent;
+    color: #00B9FE;
+    border: 2px solid #00B9FE;
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+.secondary-button:hover {
+    background-color: #00B9FE1A; /* Very light blue tint */
+}
+
+
+/* HERO Section Specifics */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.tagline {
+    color: #A0A0A0;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+.headline {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+.headline strong {
+    color: #00B9FE;
+}
+.social-links a {
+    margin-right: 20px;
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+.project-card {
+    background-color: #2A2A2A; /* Slightly lighter box for card background */
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid #00B9FE; /* Aesthetic accent line */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 185, 254, 0.15); /* Subtle glowing shadow */
+}
+.project-card h3 {
+    margin-top: 0;
+    color: #00B9FE;
+}
+.project-card .project-link {
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.tech-skills h3, .soft-skills h3 {
+    color: #00B9FE;
+}
+.skill-list span {
+    display: block;
+    margin-bottom: 8px;
+    background: #2A2A2A;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .skills-grid, .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    nav ul {
+        display: none; /* Hide for mobile; consider a hamburger menu if needed */
+    }
+}
