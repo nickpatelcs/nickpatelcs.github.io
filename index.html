@@ -4,121 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicholas Patel | Aspiring Software Engineer</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Load Inter font family -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
+    <!-- 1. NAVIGATION BAR -->
     <header id="navbar">
         <nav>
             <a href="#home" class="logo">NICK PATEL</a>
             <ul>
-                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills & Drive</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact" class="cta-button">Connect</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
+        <!-- 2. HERO/HOME SECTION -->
+        <section id="home" class="hero section-padded">
             <div class="hero-content">
-                <p class="tagline">Purdue CS Student | Software Dev Intern</p>
-                <h1>Hi, I'm **Nicholas Patel**</h1>
-                <p class="headline">An aspiring **Software Engineer** specializing in **iOS development** and driven by a curiosity to **build, optimize, and create** impactful technology.</p>
+                <p class="tagline">Purdue CS Student (3.5/4.0) | Software Development Intern</p>
+                <h1>Nicholas Patel</h1>
+                <p class="headline">A highly driven **Software Engineer** focused on **Mobile and Full-Stack Development**. I translate complex systems into efficient code, combining technical depth (MVVM, Agile) with cross-functional leadership and disciplined execution.</p>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="icon-link">LinkedIn</a>
-                    <a href="https://github.com/nickpatelcs" target="_blank" class="icon-link">GitHub</a>
-                    <a href="#projects" class="primary-button">View My Work</a>
+                    <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/nickpatelcs" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#projects" class="primary-button">View Technical Work</a>
                 </div>
+            </div>
+        </section>
+
+        <!-- 3. EDUCATION SECTION -->
+        <section id="education" class="section-padded">
+            <h2>Education & Focus</h2>
+            <div class="education-card">
+                <h3>Purdue University <span class="float-right">May 2027</span></h3>
+                <p class="role">Bachelor of Science, Computer Science (GPA: 3.5/4.0)</p>
+                <p class="details">Concentrations in **Software Engineering** and **Machine Learning**.</p>
+                <ul class="activities">
+                    <li>**Officer, Purdue Boxing (Recruitment):** Demonstrated leadership and discipline through early morning training and club management.</li>
+                    <li>**USAPL National Competitor, Purdue Powerlifting:** Applied goal-setting, planning, and mental resilience, traits crucial for complex software delivery.</li>
+                </ul>
             </div>
         </section>
         
-        <section id="about" class="section-padded">
-            <h2>About Me</h2>
-            <div class="bio-container">
-                <p>I'm a sophomore Computer Science student at **Purdue University** and currently a **Software Development Intern** at U.S. Steel. My experience is centered around software development principles and transforming complex ideas into functional, user-centric applications.</p>
-                <p>I thrive in environments that challenge me to apply my skills in **programming, development, and problem-solving**. I’m passionate about the complete development lifecycle, from initial ideation and design (which is where my graphic design and creative skills come in) to implementation and deployment (which is where my iOS development shines).</p>
-                <p>I'm constantly **honing my craft** and always seeking opportunities to learn, grow, and make a tangible impact. **Let's build something amazing together!**</p>
-            </div>
+        <!-- 4. PROFESSIONAL EXPERIENCE SECTION -->
+        <section id="experience" class="section-padded">
+            <h2>Professional Experience</h2>
+            
+            <!-- U.S. Steel -->
+            <article class="exp-card">
+                <h3>U.S. Steel Corporation <span class="float-right">Jan. 2025 – Dec. 2025</span></h3>
+                <p class="role">Student Employee - IT (Enterprise Manufacturing Solutions - Supply Chain)</p>
+                <ul class="exp-list">
+                    <li>Developed and maintained a critical web application for tracking and managing **steel inventory**, directly supporting Enterprise Manufacturing Solutions.</li>
+                    <li>Executed end-to-end **SDLC processes**, including configuration, testing, and deployment of features and enhancements.</li>
+                    <li>Participated in **Agile sprint meetings** with international teams, delivering improvements to system reliability and UI clarity.</li>
+                    <li>**Stack:** Java (Eclipse, Apache Tomcat), JavaScript, SQL (Toad), Agile, Git.</li>
+                </ul>
+            </article>
+
+            <!-- Simcoach Games -->
+            <article class="exp-card">
+                <h3>Simcoach Games <span class="float-right">Summer 2022</span></h3>
+                <p class="role">Game Development Apprentice</p>
+                <ul class="exp-list">
+                    <li>Completed a summer apprenticeship focused on developing interactive learning tools within a collaborative team environment.</li>
+                    <li>Engineered components of a **3D first-person music and color therapy game** using Unity and C# as a therapeutic tool for neurodivergent patients.</li>
+                    <li>Collaborated in a 4-person development team, culminating in a presentation of the project's technical and clinical utility to **over 100 Pittsburgh businesses.**</li>
+                    <li>**Stack:** Unity, C#, Game Development, 3D Modeling/Design.</li>
+                </ul>
+            </article>
+
         </section>
 
+        <!-- 5. PROJECTS SECTION -->
         <section id="projects" class="section-padded">
-            <h2>Featured Projects</h2>
+            <h2>Featured Development Projects</h2>
             <div class="project-grid">
 
+                <!-- PROJECT 1: Food Flip (iOS) -->
                 <article class="project-card primary-focus">
-                    <h3>Food Flip: Decide Where to Eat (iOS)</h3>
-                    <p class="role">**Role:** Lead Developer, UX/UI Designer</p>
-                    <p>My independently developed iOS application available on the Apple App Store. Food Flip solves **choice overload** in dining decisions by using a tournament-style bracket to narrow down nearby restaurant options quickly and easily.</p>
+                    <h3>Food Flip – iOS Application <span class="float-right role">Independent Founder/Developer</span></h3>
+                    <p>Gamified restaurant decision-making app utilizing an **algorithmic tournament-based pairing system**. Focus on clean architecture and high-performance native development.</p>
                     <ul>
-                        <li>**Core Feature:** Implements a unique head-to-head comparison logic to simplify selection.</li>
-                        <li>**Technical Skills:** Swift, UIKit, MapKit Integration, App Store Deployment, **Focus on User Experience.**</li>
+                        <li>**Architecture:** Engineered a modular **MVVM architecture** with **Combine** for reactive state management and improved scalability.</li>
+                        <li>**Impact:** Achieved **500+ downloads** and peaked at **#2 in the Food & Drink category** upon launch.</li>
+                        <li>**Stack:** Swift (SwiftUI, Combine, CoreData), Xcode, Google Places API, MapKit, REST APIs.</li>
                     </ul>
-                    <a href="[Link to App Store Page]" target="_blank" class="project-link primary-button">View on App Store</a>
-                    <a href="[Link to GitHub Repo for App (if public)]" target="_blank" class="project-link secondary-button">Code on GitHub</a>
+                    <div class="card-links">
+                        <a href="[Link to App Store Page]" target="_blank" class="project-link primary-button"><i class="fab fa-apple"></i> App Store</a>
+                    </div>
                 </article>
 
+                <!-- PROJECT 2: CS 307 Design Project -->
                 <article class="project-card">
-                    <h3>Digital Design & Content Creation</h3>
-                    <p class="role">**Role:** Graphic Designer, Creative Specialist</p>
-                    <p>Utilizing design tools for effective communication and branding. I currently serve as a **Graphic Designer for RedCup News (Purdue Branch)**, creating engaging sports and gameday media. This work highlights my attention to detail, visual hierarchy, and ability to meet fast-paced creative deadlines.</p>
-                    <a href="[Link to Design Portfolio/Instagram]" target="_blank" class="project-link primary-button">View Design Portfolio</a>
+                    <h3>Auto Shop Management Web App <span class="float-right role">CS 307 Design Project</span></h3>
+                    <p>A comprehensive full-stack web application developed for Purdue's CS 307 course, specializing in vehicle service appointment scheduling.</p>
+                    <ul>
+                        <li>**Backend:** Implemented Role-Based Access Control secured by **Google OAuth 2.0 and JWTs**. Integrated **Stripe** for payment processing.</li>
+                        <li>**Process:** Managed a **four-person team** using **Scrum**, successfully maintaining project velocity and alignment.</li>
+                        <li>**Stack:** Python (Django), JavaScript (React), Node.js, SQL/PostgreSQL, REST APIs.</li>
+                    </ul>
+                    <div class="card-links">
+                        <a href="[Link to GitHub Repo for Project]" target="_blank" class="project-link secondary-button"><i class="fab fa-github"></i> Code/Details</a>
+                    </div>
                 </article>
 
+                <!-- PROJECT 3: Graphic Design (Reframed) -->
                 <article class="project-card">
-                    <h3>[Project 3 Title - e.g., Data Structures Visualizer]</h3>
-                    <p class="role">**Role:** [Your Role]</p>
-                    <p>A brief (1-2 sentence) description of a second software project, highlighting the technical stack (e.g., Python, Java, Web stack).</p>
-                    <a href="[Link to Project 3 GitHub]" target="_blank" class="project-link secondary-button">View on GitHub</a>
+                    <h3>Digital Design & Creative Assets <span class="float-right role">Graphic Designer</span></h3>
+                    <p>Serving as a **Graphic Designer for RedCup News (Purdue Branch)**, this work highlights expertise in visual communication, aesthetic design, and meeting fast-paced creative deadlines—essential for effective UI/UX design.</p>
+                    <div class="card-links">
+                        <a href="[Link to Design Portfolio/Instagram]" target="_blank" class="project-link secondary-button"><i class="fas fa-palette"></i> View Design Work</a>
+                    </div>
                 </article>
-
             </div>
         </section>
 
+        <!-- 6. SKILLS & TECHNOLOGIES -->
         <section id="skills" class="section-padded">
-            <h2>Skills & Drive</h2>
+            <h2>Skills & Technologies</h2>
             <div class="skills-grid">
-                <div class="tech-skills">
-                    <h3>Technical Expertise</h3>
+                <div class="skills-category">
+                    <h3>Programming Languages</h3>
                     <div class="skill-list">
-                        <span>**Languages:** Swift, Python, C, Java, HTML, CSS, JavaScript</span>
-                        <span>**Frameworks/Tools:** iOS/SwiftUI/UIKit, Git/GitHub, Xcode, REST APIs, UI/UX Design</span>
-                        <span>**Areas:** Mobile Development, Object-Oriented Programming (OOP), Data Structures</span>
+                        <span>Swift</span><span>Python</span><span>Java</span><span>C++</span><span>C</span><span>C#</span><span>JavaScript</span><span>SQL</span>
                     </div>
                 </div>
-
-                <div class="soft-skills">
-                    <h3>Leadership & Discipline</h3>
+                <div class="skills-category">
+                    <h3>Frameworks & Tools</h3>
                     <div class="skill-list">
-                        <p>My commitment to continuous improvement extends beyond the terminal. My dedication to **Purdue's Boxing and Powerlifting Clubs** translates directly to my professional ethos:</p>
-                        <ul>
-                            <li>**Purdue Boxing Club (Officer):** Practicing **discipline** and **consistency** (6-7 AM drills) and holding a **leadership position** demonstrates my drive and accountability.</li>
-                            <li>**Purdue Powerlifting Club:** Training for a collegiate national qualifier demands **goal-setting, meticulous planning** (progressive overload), and **mental resilience**—all critical for long-term software projects.</li>
-                        </ul>
+                        <span>iOS (SwiftUI/UIKit)</span><span>React</span><span>Django</span><span>Node.js</span><span>Express</span><span>Xcode</span><span>Unity</span><span>Git/GitHub</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Concepts & Databases</h3>
+                    <div class="skill-list">
+                        <span>MVVM/MVC</span><span>Agile/Scrum</span><span>REST APIs</span><span>OOP</span><span>Data Structures</span><span>PostgreSQL</span><span>MySQL</span><span>CoreData</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Soft Skills & Drive</h3>
+                    <div class="skill-list">
+                        <span>Team Leadership</span><span>Disciplined Execution</span><span>Problem-Solving</span><span>UX/UI Design</span><span>Communication</span><span>Creativity</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section-padded">
-            <h2>Get In Touch</h2>
-            <p>I'm currently seeking Summer 2026 internship opportunities and am always open to discussing new projects or connecting with like-minded individuals. Reach out directly or connect with me on LinkedIn!</p>
-            <div class="contact-methods">
-                <p>Email me directly at: **<a href="mailto:nicholaspateldev@gmail.com" class="email-link">nicholaspateldev@gmail.com</a>**</p>
-                <a href="mailto:nicholaspateldev@gmail.com" class="primary-button">Send an Email</a>
-                
-                </div>
-            <div class="donation-note">
-                <p class="small-text">Development costs are sometimes offset by kind supporters. Thank you for the consideration! <a href="https://ko-fi.com/nickpatel" target="_blank">Support on Ko-fi</a></p>
+        <!-- 7. CONTACT SECTION -->
+        <section id="contact" class="section-padded contact-section">
+            <h2>Let's Connect</h2>
+            <p>I am actively seeking **Summer 2026 Software Engineering Internship** opportunities. I welcome discussions about full-stack development, mobile architecture, and collaborative projects.</p>
+            <div class="contact-details">
+                <p><i class="fas fa-envelope icon"></i> **Primary Email:** <a href="mailto:nicholaspateldev@gmail.com" class="email-link">nicholaspateldev@gmail.com</a></p>
+                <p><i class="fas fa-envelope icon"></i> **Purdue Email:** <a href="mailto:pate1919@purdue.edu" class="email-link">pate1919@purdue.edu</a></p>
+                <p><i class="fas fa-phone-alt icon"></i> **Phone:** 412-874-6095</p>
+            </div>
+
+            <div class="kofi-note">
+                <p class="small-text">Interested in supporting independent development? Thank you! <a href="https://ko-fi.com/nickpatel" target="_blank" class="kofi-link">Support on Ko-fi</a></p>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Nicholas Patel. Built with HTML, CSS, and Passion.</p>
+        <p>&copy; 2025 Nicholas Patel. Built with a developer's touch.</p>
     </footer>
 
-    </body>
+    <!-- Simple JavaScript for sticky nav and smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
