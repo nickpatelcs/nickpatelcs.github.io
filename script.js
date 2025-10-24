@@ -1,28 +1,25 @@
-// Fade-in sections on scroll
-const faders = document.querySelectorAll('.fade-in');
-const projectCards = document.querySelectorAll('.project-card');
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-const appearOptions = {
-    threshold: 0.2,
-    rootMargin: "0px 0px -50px 0px"
-};
-
-const appearOnScroll = new IntersectionObserver(function(entries, observer){
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-        }
-    });
-}, appearOptions);
-
-faders.forEach(fader => { appearOnScroll.observe(fader); });
-projectCards.forEach(card => { appearOnScroll.observe(card); });
-
-// Glowing pulse for headings
-const glowHeadings = document.querySelectorAll('.glow-text');
-setInterval(() => {
-    glowHeadings.forEach(h => {
-        h.style.textShadow = `0 0 ${Math.random()*10 + 5}px #00B9FE, 0 0 ${Math.random()*20 + 10}px #00B9FE66`;
-    });
-}, 1000);
+/* Project card entrance animation */
+.project-card {
+    background: rgba(40,40,40,0.85);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #00B9FE;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
