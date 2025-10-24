@@ -1,16 +1,25 @@
-// Simple scroll animation
-const sections = document.querySelectorAll('section');
-window.addEventListener('scroll', () => {
-    sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        const trigger = window.innerHeight / 1.2;
-        if (top < trigger) {
-            section.classList.add('fade-in');
+// Fade-in sections on scroll
+const faders = document.querySelectorAll('.fade-in');
+const projectCards = document.querySelectorAll('.project-card');
+
+const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
         }
     });
-});
+}, appearOptions);
 
-// Optional: glowing pulse for headings
+faders.forEach(fader => { appearOnScroll.observe(fader); });
+projectCards.forEach(card => { appearOnScroll.observe(card); });
+
+// Glowing pulse for headings
 const glowHeadings = document.querySelectorAll('.glow-text');
 setInterval(() => {
     glowHeadings.forEach(h => {
