@@ -4,199 +4,327 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicholas Patel | Aspiring Software Engineer</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Inter font family -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Tailwind Configuration */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'purdue-gold': '#CC9933',
+                        'purdue-black': '#232D37',
+                        'bg-light': '#f8f9fa',
+                        'card-bg': '#ffffff',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-padded {
+            padding: 4rem 1rem;
+        }
+        @media (min-width: 768px) {
+            .section-padded {
+                padding: 6rem 2rem;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
     <!-- 1. NAVIGATION BAR -->
-    <header id="navbar">
-        <nav>
-            <a href="#home" class="logo">NICK PATEL</a>
-            <ul>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact" class="cta-button">Connect</a></li>
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-purdue-black">NICK PATEL</a>
+            <ul class="hidden md:flex space-x-6 text-lg font-medium">
+                <li><a href="#education" class="hover:text-purdue-gold transition duration-200">Education</a></li>
+                <li><a href="#experience" class="hover:text-purdue-gold transition duration-200">Experience</a></li>
+                <li><a href="#projects" class="hover:text-purdue-gold transition duration-200">Projects</a></li>
+                <li><a href="#skills" class="hover:text-purdue-gold transition duration-200">Skills</a></li>
+                <li><a href="#contact" class="bg-purdue-gold text-white px-4 py-2 rounded-lg hover:bg-opacity-80 transition duration-200">Connect</a></li>
             </ul>
+            <!-- Mobile Menu Placeholder (Not implemented as per single-file mandate simplicity) -->
         </nav>
     </header>
 
-    <main>
+    <main class="max-w-6xl mx-auto">
         <!-- 2. HERO/HOME SECTION -->
-        <section id="home" class="hero section-padded">
-            <div class="hero-content">
-                <p class="tagline">Purdue CS Student (3.5/4.0) | Software Development Intern</p>
-                <h1>Nicholas Patel</h1>
-                <p class="headline">A highly driven **Software Engineer** focused on **Mobile and Full-Stack Development**. I translate complex systems into efficient code, combining technical depth (MVVM, Agile) with cross-functional leadership and disciplined execution.</p>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                    <a href="https://github.com/nickpatelcs" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#projects" class="primary-button">View Technical Work</a>
+        <section id="home" class="section-padded text-center md:text-left pt-20 pb-16 bg-white shadow-lg rounded-b-xl mb-8">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-xl text-purdue-gold font-semibold mb-2">Purdue CS Student | Software Development Intern | $3.5 \text{ GPA}$</p>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-purdue-black leading-tight mb-4">Nicholas Patel</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">A highly driven **Software Engineer** focused on **Mobile and Full-Stack Development**. I translate complex systems into efficient code, combining technical depth (MVVM, Agile) with cross-functional leadership and disciplined execution.</p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="flex items-center justify-center bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-blue-800 transition duration-300 font-semibold" aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin mr-2"></i> Connect on LinkedIn
+                    </a>
+                    <a href="#projects" class="flex items-center justify-center border-2 border-purdue-black text-purdue-black px-6 py-3 rounded-xl hover:bg-purdue-black hover:text-white transition duration-300 font-semibold">
+                        View Technical Work
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- 3. EDUCATION SECTION -->
-        <section id="education" class="section-padded">
-            <h2>Education & Focus</h2>
-            <div class="education-card">
-                <h3>Purdue University <span class="float-right">May 2027</span></h3>
-                <p class="role">Bachelor of Science, Computer Science (GPA: 3.5/4.0)</p>
-                <p class="details">Concentrations in **Software Engineering** and **Machine Learning**.</p>
-                <ul class="activities">
-                    <li>**Officer, Purdue Boxing (Recruitment):** A leadership role overseeing recruitment and organization for the club's high-intensity, **6-7 AM training regimen**. Demonstrates exceptional **commitment, time management**, and the ability to maintain a high-energy performance standard.</li>
-                    <li>**USAPL National Competitor, Purdue Powerlifting:** Applied goal-setting, data-driven training (periodization), and mental resilience—paralleling the execution needed for complex software delivery. Actively training to qualify for **Nationals in November 2025**.</li>
+        <section id="education" class="section-padded pt-12">
+            <h2 class="text-3xl font-bold text-purdue-black mb-6 border-b-2 border-purdue-gold pb-2">Education & Dedication</h2>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg border-t-4 border-purdue-gold">
+                <div class="flex justify-between items-start mb-2">
+                    <h3 class="text-2xl font-semibold text-purdue-black">Purdue University</h3>
+                    <span class="text-lg text-gray-500 font-medium">Expected May 2027</span>
+                </div>
+                <p class="text-xl text-gray-700 mb-4">Bachelor of Science, Computer Science (GPA: 3.5/4.0)</p>
+                <p class="text-lg text-gray-600 mb-4">Concentrations: **Software Engineering** and **Machine Learning**.</p>
+                
+                <h4 class="text-xl font-semibold text-purdue-black mt-6 mb-3">Athletics, Leadership, and Discipline</h4>
+                <ul class="space-y-4 text-gray-700">
+                    <li class="flex items-start">
+                        <i class="fas fa-hand-rock text-purdue-gold text-xl mr-3 mt-1"></i>
+                        <div class="flex-1">
+                            **Officer, Purdue Boxing (Recruitment):** Held a leadership role in recruitment and organization, mandating a rigorous, high-intensity **6-7 AM training regimen**. This demonstrates exceptional **commitment, time management**, and the discipline required to maintain high performance standards *before* the workday even begins—a direct parallel to prioritizing and executing critical tasks in software development.
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-dumbbell text-purdue-gold text-xl mr-3 mt-1"></i>
+                        <div class="flex-1">
+                            **USAPL National Competitor, Purdue Powerlifting:** Applied goal-setting, data-driven training (periodization), and mental resilience to compete at the national level. I am actively training to qualify for **Nationals in November 2025**, showcasing the ability to **set ambitious long-term goals and execute daily tasks** with precision and focus, translating directly to project delivery and technical mastery.
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
-        
+
         <!-- 4. PROFESSIONAL EXPERIENCE SECTION -->
-        <section id="experience" class="section-padded">
-            <h2>Professional Experience</h2>
+        <section id="experience" class="section-padded pt-12">
+            <h2 class="text-3xl font-bold text-purdue-black mb-6 border-b-2 border-purdue-gold pb-2">Professional Experience</h2>
             
-            <!-- U.S. Steel -->
-            <article class="exp-card">
-                <h3>U.S. Steel Corporation <span class="float-right">Jan. 2025 – Dec. 2025</span></h3>
-                <p class="role">Student Employee - IT (Enterprise Manufacturing Solutions - Supply Chain)</p>
-                <ul class="exp-list">
-                    <li>Developed and maintained a critical web application for tracking and managing **steel inventory**, directly supporting Enterprise Manufacturing Solutions.</li>
-                    <li>Executed end-to-end **SDLC processes**, including configuration, testing, and deployment of features and enhancements.</li>
-                    <li>Participated in **Agile sprint meetings** with international teams, delivering improvements to system reliability and UI clarity.</li>
-                    <li>**Stack:** Java (Eclipse, Apache Tomcat), JavaScript, SQL (Toad), Agile, Git.</li>
-                </ul>
-            </article>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- U.S. Steel -->
+                <article class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-blue-600">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold text-blue-600">U.S. Steel Corporation</h3>
+                        <span class="text-sm text-gray-500 font-medium">Jan. 2025 – Present (10 mos)</span>
+                    </div>
+                    <p class="text-md font-medium text-gray-700 mb-3">Student Intern - IT (Enterprise Manufacturing Solutions)</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 text-sm">
+                        <li>Developed and maintained a critical **Java/JavaScript web application** for tracking and managing steel inventory within the Supply Chain team.</li>
+                        <li>Executed end-to-end **SDLC processes**, including configuration, testing, and deployment of features and enhancements in an Agile environment.</li>
+                        <li>Participated in **Agile sprint meetings** with international teams, delivering improvements to system reliability and UI clarity.</li>
+                        <li>**Stack:** Java (Apache Tomcat), JavaScript, SQL (Toad), Agile, Git.</li>
+                    </ul>
+                </article>
+                
+                <!-- Simcoach Games -->
+                <article class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-green-600">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold text-green-600">Simcoach Games</h3>
+                        <span class="text-sm text-gray-500 font-medium">Jun 2022 - Jul 2022 (2 mos)</span>
+                    </div>
+                    <p class="text-md font-medium text-gray-700 mb-3">Summer Apprentice / Lead Developer</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 text-sm">
+                        <li>Led development of *Harmony Hall*, an interactive **3D therapeutic game** (Unity/C#) for neurodivergent patients, serving as the **Lead Developer** for coding all player movements and special effects.</li>
+                        <li>Collaborated in a **four-member team** through conceptualization, design, and development, culminating in a presentation to **over 50 local businesses**.</li>
+                        <li>**Key Skill:** Demonstrated early ability in game design, public speaking, and managing a collaborative technical project.</li>
+                    </ul>
+                </article>
 
-            <!-- Simcoach Games -->
-            <article class="exp-card">
-                <h3>Simcoach Games <span class="float-right">Summer 2022</span></h3>
-                <p class="role">Game Development Apprentice</p>
-                <ul class="exp-list">
-                    <li>Completed a summer apprenticeship focused on developing interactive learning tools within a collaborative team environment.</li>
-                    <li>Engineered components of a **3D first-person music and color therapy game** using Unity and C# as a therapeutic tool for neurodivergent patients.</li>
-                    <li>Collaborated in a 4-person development team, culminating in a presentation of the project's technical and clinical utility to **over 100 Pittsburgh businesses.**</li>
-                    <li>**Stack:** Unity, C#, Game Development, 3D Modeling/Design.</li>
-                </ul>
-            </article>
-            
-            <!-- Additional Work Experience (Added to complete resume details) -->
-            <article class="exp-card">
-                <h3>Additional Work Experience <span class="float-right role">Customer Service & Adaptability</span></h3>
-                <ul class="exp-list">
-                    <li>**RedCup Purdue, Graphic Designer:** Gained experience in visual communication and meeting fast-paced creative deadlines.</li>
-                    <li>**Don’s Appliances, Delivery Installation Technician:** Developed strong customer service and on-site logistics management skills.</li>
-                    <li>**NrGize Smoothie Bar, Server & Cashier** and **Portman’s Deli & Bakery, Baker:** Demonstrated consistent work ethic, attention to detail, and process adherence in service roles.</li>
-                </ul>
-            </article>
-
+                <!-- Technology Leadership Initiative -->
+                <article class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-purple-600">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold text-purple-600">University of Pittsburgh</h3>
+                        <span class="text-sm text-gray-500 font-medium">Jul 2022 (1 mo)</span>
+                    </div>
+                    <p class="text-md font-medium text-gray-700 mb-3">Technology Leadership Initiative Internship</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 text-sm">
+                        <li>Intensive multi-week program exploring hardware, operating systems, big data, **web design**, and mobile application development.</li>
+                        <li>Culminated in a group collaboration to **create a custom web application**, building foundational skills in **Project Management** and Human-Computer Interaction.</li>
+                    </ul>
+                </article>
+                
+                <!-- Other Work Experience (Combined) -->
+                <article class="bg-card-bg p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-l-4 border-yellow-600">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold text-yellow-600">Customer-Facing & Technical Service Roles</h3>
+                        <span class="text-sm text-gray-500 font-medium">2021 – 2024 (Various)</span>
+                    </div>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 text-sm">
+                        <li>**Installation Technician (Don's Appliances):** Managed logistics, ensured safe transport, and performed precise installations of high-end appliances, highlighting **attention to detail** and problem-solving under client pressure.</li>
+                        <li>**Baker (Portman's Deli) & Barista (NrGize Cafe):** Consistently opened and operated businesses, demonstrating **strong work ethic, process adherence**, and reliable execution of time-sensitive tasks.</li>
+                        <li>**Graphic Designer (RedCup News):** Created digital graphics and media, applying skills in Adobe Creative Suite and DaVinci Resolve to meet fast-paced visual communication needs.</li>
+                    </ul>
+                </article>
+            </div>
         </section>
 
         <!-- 5. PROJECTS SECTION -->
-        <section id="projects" class="section-padded">
-            <h2>Featured Development Projects</h2>
-            <div class="project-grid">
+        <section id="projects" class="section-padded pt-12 bg-gray-100 mt-8 rounded-xl">
+            <h2 class="text-3xl font-bold text-purdue-black mb-8 border-b-2 border-purdue-gold pb-2">Signature Technical Projects</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                 <!-- PROJECT 1: Food Flip (iOS) -->
-                <article class="project-card primary-focus">
-                    <h3>Food Flip – iOS Application <span class="float-right role">Independent Founder/Developer</span></h3>
-                    <p>Gamified restaurant decision-making app utilizing an **algorithmic tournament-based pairing system**. Focus on clean architecture and high-performance native development.</p>
-                    <ul>
-                        <li>**Architecture:** Engineered a modular **MVVM architecture** with **Combine** for reactive state management and improved scalability.</li>
-                        <li>**Impact:** Achieved **500+ downloads** and peaked at **#2 in the Food & Drink category** upon launch.</li>
-                        <li>**Stack:** Swift (SwiftUI, Combine, CoreData), Xcode, Google Places API, MapKit, REST APIs.</li>
-                    </ul>
-                    <div class="card-links">
-                        <a href="[Link to App Store Page]" target="_blank" class="project-link primary-button"><i class="fab fa-apple"></i> App Store</a>
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-red-500">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-2xl font-bold text-red-500">Food Flip – iOS App</h3>
+                        <span class="text-sm text-gray-500 font-medium">Jan 2024 – Present</span>
                     </div>
+                    <p class="text-gray-700 mb-4">Independently developed app (SwiftUI) that **gamifies restaurant decision-making** using a tournament-based pairing system with the Google Places API.</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 text-base">
+                        <li>**Impact:** Reached **\#2 in the Food & Drink category** on the App Store with **500+ downloads** and **2000+ sessions**.</li>
+                        <li>**Architecture:** Led full development lifecycle, engineering a modular **MVVM architecture** with **Combine** for reactive state management.</li>
+                        <li>**Monetization & Scale:** Evaluated API pricing models for cost-effectiveness and integrated **Google AdMob** for monetization.</li>
+                        <li>**Stack:** Swift (SwiftUI, Combine, CoreData), Google Places API, AdMob.</li>
+                    </ul>
+                    <a href="https://apple.co/40zhMzE" target="_blank" class="mt-4 inline-flex items-center text-red-600 hover:underline font-semibold">
+                        <i class="fab fa-apple mr-2"></i> View on App Store
+                    </a>
                 </article>
 
-                <!-- PROJECT 2: CS 307 Design Project -->
-                <article class="project-card">
-                    <h3>Auto Shop Management Web App <span class="float-right role">CS 307 Design Project</span></h3>
-                    <p>A comprehensive full-stack web application developed for Purdue's CS 307 course, specializing in vehicle service appointment scheduling.</p>
-                    <ul>
-                        <li>**Backend:** Implemented Role-Based Access Control secured by **Google OAuth 2.0 and JWTs**. Integrated **Stripe** for payment processing.</li>
-                        <li>**Process:** Managed a **four-person team** using **Scrum**, successfully maintaining project velocity and alignment.</li>
-                        <li>**Stack:** Python (Django), JavaScript (React), Node.js, SQL/PostgreSQL, REST APIs.</li>
-                    </ul>
-                    <div class="card-links">
-                        <a href="[Link to GitHub Repo for Project]" target="_blank" class="project-link secondary-button"><i class="fab fa-github"></i> Code/Details</a>
+                <!-- PROJECT 2: RepairFlow (CS 307) -->
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-indigo-600">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-2xl font-bold text-indigo-600">RepairFlow – Full-Stack Auto Shop Web App</h3>
+                        <span class="text-sm text-gray-500 font-medium">Aug 2025 – Dec 2025</span>
                     </div>
+                    <p class="text-gray-700 mb-4">Captsone project for CS 307. Comprehensive platform for appointment scheduling and shop management.</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 text-base">
+                        <li>**Leadership:** Managed a **four-person Scrum team** as the **Scrum Master**, ensuring high velocity and project alignment.</li>
+                        <li>**Security:** Implemented granular **Role-Based Access Control (RBAC)** secured by **Google OAuth 2.0 and JWTs**.</li>
+                        <li>**Features:** Integrated **Stripe API** for secure online payments and utilized Django ORM with **PostgreSQL**.</li>
+                        <li>**Stack:** Python (Django), React, JavaScript, Node.js, SQL/PostgreSQL, Stripe, OAuth 2.0.</li>
+                    </ul>
+                    <a href="[Link to GitHub Repo for RepairFlow]" target="_blank" class="mt-4 inline-flex items-center text-indigo-700 hover:underline font-semibold">
+                        <i class="fab fa-github mr-2"></i> Code/Details
+                    </a>
                 </article>
 
-                <!-- PROJECT 3: Graphic Design (Reframed) -->
-                <article class="project-card">
-                    <h3>Digital Design & Creative Assets <span class="float-right role">Graphic Designer</span></h3>
-                    <p>Serving as a **Graphic Designer for RedCup News (Purdue Branch)**, this work highlights expertise in visual communication, aesthetic design, and meeting fast-paced creative deadlines—essential for effective UI/UX design.</p>
-                    <div class="card-links">
-                        <a href="[Link to Design Portfolio/Instagram]" target="_blank" class="project-link secondary-button"><i class="fas fa-palette"></i> View Design Work</a>
+                <!-- PROJECT 3: Custom C Heap Memory Allocator -->
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-teal-600">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-2xl font-bold text-teal-600">Custom C Heap Memory Allocator</h3>
+                        <span class="text-sm text-gray-500 font-medium">Aug 2025 – Sep 2025</span>
                     </div>
+                    <p class="text-gray-700 mb-4">High-performance custom implementation of `malloc`, `free`, `calloc`, and `realloc` for CS 252 (Systems Programming).</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 text-base">
+                        <li>**Efficiency:** Developed a **Segregated Free List system** (doubly linked lists) to index free blocks, optimizing lookup times.</li>
+                        <li>**Fragmentation Control:** Implemented **Boundary Tags** to enable $O(1)$ lookup and **coalescing of adjacent free blocks**, effectively combating external fragmentation.</li>
+                        <li>**Low-Level:** Used `sbrk()` to manage OS memory chunks and low-level **pointer arithmetic** to enforce block alignment.</li>
+                        <li>**Stack:** C, C++, Systems Programming, Unix.</li>
+                    </ul>
+                </article>
+
+                <!-- PROJECT 4: UNIX Custom Shell Implementation -->
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-yellow-800">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="text-2xl font-bold text-yellow-800">UNIX Custom Shell Implementation</h3>
+                        <span class="text-sm text-gray-500 font-medium">Sep 2025 – Oct 2025</span>
+                    </div>
+                    <p class="text-gray-700 mb-4">Feature-rich, custom shell interpreter in C/C++ combining functionality similar to bash and csh for CS 252.</p>
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-600 text-base">
+                        <li>**Parsing:** Developed the shell's grammar using **Flex (Lex) and Bison (Yacc)** to support complex features (I/O redirection, piping, background execution).</li>
+                        <li>**Process Control:** Implemented core execution using **`fork()` and `execvp()`**, managing signal handlers (`SIGINT`, `SIGCHLD`) to prevent zombie processes.</li>
+                        <li>**Advanced Features:** Developed a custom **line editor** (raw terminal mode) for history traversal and implemented Environment Variable Expansion.</li>
+                        <li>**Stack:** C, C++, Flex/Bison, Systems Programming, Unix.</li>
+                    </ul>
                 </article>
             </div>
         </section>
 
-        <!-- 6. SKILLS & TECHNOLOGIES -->
-        <section id="skills" class="section-padded">
-            <h2>Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
-                        <span>Swift</span><span>Python</span><span>Java</span><span>C++</span><span>C</span><span>C#</span><span>JavaScript</span><span>SQL</span>
+        <!-- 6. SKILLS & TECHNOLOGIES (EXPANDED) -->
+        <section id="skills" class="section-padded pt-12">
+            <h2 class="text-3xl font-bold text-purdue-black mb-8 border-b-2 border-purdue-gold pb-2">Technical Skills & Expertise</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- COLUMN 1: Core Programming & Systems -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-gray-700">
+                    <h3 class="text-xl font-bold text-gray-700 mb-3">Core Programming & Systems</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">C</span><span class="skill-tag">C++</span><span class="skill-tag">Swift</span><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Objective-C</span><span class="skill-tag">C#</span>
+                        <span class="skill-tag">Malloc/Free</span><span class="skill-tag">Lex/Yacc/Bison</span><span class="skill-tag">Linux/UNIX</span><span class="skill-tag">Memory Allocation</span>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <h3>Frameworks & Tools</h3>
-                    <div class="skill-list">
-                        <span>iOS (SwiftUI/UIKit)</span><span>React</span><span>Django</span><span>Node.js</span><span>Express</span><span>Xcode</span><span>Unity</span><span>Git/GitHub</span>
+
+                <!-- COLUMN 2: Frameworks & Application Development -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-600">
+                    <h3 class="text-xl font-bold text-blue-600 mb-3">Frameworks & Application Dev</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">SwiftUI</span><span class="skill-tag">React.js</span><span class="skill-tag">Django</span><span class="skill-tag">Unity</span><span class="skill-tag">UIKit</span><span class="skill-tag">iOS Development</span>
+                        <span class="skill-tag">MVVM/MVC</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Web Apps</span><span class="skill-tag">Mobile Apps</span>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <h3>Concepts & Databases</h3>
-                    <div class="skill-list">
-                        <span>MVVM/MVC</span><span>Agile/Scrum</span><span>REST APIs</span><span>OOP</span><span>Data Structures</span><span>PostgreSQL</span><span>MySQL</span><span>CoreData</span>
+
+                <!-- COLUMN 3: Tools, DevOps & Scripting -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600">
+                    <h3 class="text-xl font-bold text-green-600 mb-3">Tools, DevOps & Scripting</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Bash/Shell Scripting</span><span class="skill-tag">Regular Expressions</span><span class="skill-tag">Google Places API</span><span class="skill-tag">AdMob</span><span class="skill-tag">Xcode</span>
+                        <span class="skill-tag">App Store Deployment</span><span class="skill-tag">Git/GitHub</span><span class="skill-tag">VS Code</span><span class="skill-tag">Compilers</span>
                     </div>
                 </div>
-                <div class="skills-category">
-                    <h3>Soft Skills & Drive</h3>
-                    <div class="skill-list">
-                        <span>Team Leadership</span><span>Disciplined Execution</span><span>Problem-Solving</span><span>UX/UI Design</span><span>Communication</span><span>Creativity</span>
+
+                <!-- COLUMN 4: Project, Creative & Design -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-500">
+                    <h3 class="text-xl font-bold text-red-500 mb-3">Project Management & Design</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Scrum/Agile</span><span class="skill-tag">Project Management</span><span class="skill-tag">UX/UI Design</span><span class="skill-tag">Graphic Design</span><span class="skill-tag">Public Speaking</span>
+                        <span class="skill-tag">Teamwork</span><span class="skill-tag">Adobe Creative Suite</span><span class="skill-tag">DaVinci Resolve</span><span class="skill-tag">Marketing</span>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- 7. CONTACT SECTION -->
-        <section id="contact" class="section-padded contact-section">
-            <h2>Let's Connect</h2>
-            <p>I am actively seeking **Summer 2026 Software Engineering Internship** opportunities. I welcome discussions about full-stack development, mobile architecture, and collaborative projects.</p>
-            <div class="contact-details">
-                <p><i class="fas fa-envelope icon"></i> **Primary Email:** <a href="mailto:nicholaspateldev@gmail.com" class="email-link">nicholaspateldev@gmail.com</a></p>
-                <p><i class="fas fa-envelope icon"></i> **Purdue Email:** <a href="mailto:pate1919@purdue.edu" class="email-link">pate1919@purdue.edu</a></p>
-                <p><i class="fas fa-phone-alt icon"></i> **Phone:** 412-874-6095</p>
-            </div>
-
-            <div class="kofi-note">
-                <p class="small-text">Interested in supporting independent development? Thank you! <a href="https://ko-fi.com/nickpatel" target="_blank" class="kofi-link">Support on Ko-fi</a></p>
+        <section id="contact" class="section-padded contact-section bg-purdue-black text-white rounded-xl my-8">
+            <h2 class="text-3xl font-bold text-purdue-gold mb-4">Let's Connect</h2>
+            <p class="text-xl mb-6">I am actively seeking **Summer 2026 Software Engineering Internship** opportunities. I welcome discussions about full-stack development, mobile architecture, and collaborative projects.</p>
+            <div class="space-y-3">
+                <p class="text-lg"><i class="fas fa-envelope icon mr-3 text-purdue-gold"></i> **Primary Email:** <a href="mailto:pate1919@purdue.edu" class="email-link text-white hover:text-purdue-gold transition">pate1919@purdue.edu</a></p>
+                <p class="text-lg"><i class="fab fa-linkedin icon mr-3 text-purdue-gold"></i> **LinkedIn:** <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="email-link text-white hover:text-purdue-gold transition">linkedin.com/in/nickpateldev</a></p>
+                <p class="text-lg"><i class="fas fa-phone-alt icon mr-3 text-purdue-gold"></i> **Phone:** 412-874-6095</p>
             </div>
         </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 Nicholas Patel. Built with a developer's touch.</p>
+    <footer class="text-center py-4 text-gray-500 text-sm">
+        <p>&copy; 2025 Nicholas Patel. Designed for high performance.</p>
     </footer>
 
-    <!-- Simple JavaScript for sticky nav and smooth scrolling -->
+    <!-- Simple JavaScript for smooth scrolling and Tailwind Utility -->
     <script>
+        // Custom classes for Tailwind
+        document.addEventListener('DOMContentLoaded', () => {
+             document.querySelectorAll('.skill-tag').forEach(tag => {
+                tag.classList.add('px-3', 'py-1', 'bg-gray-200', 'text-gray-700', 'rounded-full', 'text-sm', 'font-medium', 'shadow-sm');
+            });
+        });
+
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                const targetId = this.getAttribute('href');
+                if (targetId === '#home') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+                document.querySelector(targetId).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
