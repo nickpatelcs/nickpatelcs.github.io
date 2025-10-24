@@ -1,152 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicholas Patel | Software Engineer</title>
-    <!-- Load Inter font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicholas Patel | Software Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="header fade-in">
+    <h1 class="name">Nicholas Patel</h1>
+    <p class="subtitle">Software Engineer | iOS & Full Stack Developer</p>
+    <div class="links">
+      <a href="https://github.com/nickpatelcs" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/nickpateldev" target="_blank">LinkedIn</a>
+      <a href="resume.pdf" target="_blank">View Résumé</a>
+    </div>
+    <a href="#projects" class="btn">Explore My Work ↓</a>
+  </header>
 
-    <!-- NAVIGATION -->
-    <header id="navbar">
-        <nav>
-            <a href="#home" class="logo">NICK PATEL</a>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact" class="cta-button">Connect</a></li>
-            </ul>
-        </nav>
-    </header>
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>
+      I'm a sophomore <strong>Computer Science student at Purdue University</strong>, concentrating in Software Engineering and Machine Learning. My work focuses on building high-quality, scalable, and impactful applications — from iOS to full-stack systems.
+    </p>
+    <p>
+      I’m passionate about writing clean, maintainable code and designing intuitive user experiences. Whether I’m building iOS apps in SwiftUI, developing web systems in React and Django, or optimizing algorithms in C++, I strive for simplicity and performance in everything I create.
+    </p>
+  </section>
 
-    <main>
-        <!-- HERO -->
-        <section id="home" class="hero section-padded">
-            <div class="hero-content">
-                <p class="tagline">Purdue CS Student | Aspiring Software Engineer</p>
-                <h1>Nicholas Patel</h1>
-                <p class="headline">
-                    I specialize in **mobile app development** for personal projects and pursue software engineering in professional roles. I build clean, scalable solutions while learning cutting-edge technologies.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="primary-button">View Technical Work</a>
-                    <a href="NicholasPatel_Resume.pdf" class="secondary-button" target="_blank"><i class="fas fa-file-alt"></i> View Resume</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="icon-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/nickpatelcs" target="_blank" class="icon-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-        </section>
+  <section id="experience" class="section fade-in">
+    <h2>Experience</h2>
+    <div class="experience-card">
+      <h3>U.S. Steel Corporation — IT Student Employee</h3>
+      <p class="small">Jan 2025 – Dec 2025 | Remote</p>
+      <ul>
+        <li>Developing internal web tools for manufacturing data management and process optimization.</li>
+        <li>Collaborating with international teams in Agile sprints to enhance supply chain visibility and system reliability.</li>
+        <li>Improved page performance and maintainability through optimized SQL queries and modular front-end design.</li>
+      </ul>
+      <p class="stack">Stack: Java, JavaScript, SQL, Eclipse, Tomcat, Agile</p>
+    </div>
 
-        <!-- ABOUT ME -->
-        <section id="about" class="section-padded">
-            <h2>About Me</h2>
-            <p>
-                I am a Purdue University Computer Science student with a strong passion for building software that solves real-world problems. My personal projects focus on **mobile app development**, while my career goal is to grow as a **full-stack software engineer**.
-            </p>
-        </section>
+    <div class="experience-card">
+      <h3>Simcoach Games — Game Development Apprentice</h3>
+      <p class="small">Jun 2022 – Jul 2022 | Pittsburgh, PA</p>
+      <ul>
+        <li>Led development of <strong>Harmony Hall</strong>, a therapeutic 3D Unity game used by neurodivergent patients and therapists.</li>
+        <li>Implemented emotion recognition through color and sound feedback in a first-person environment.</li>
+        <li>Presented the project to over 100 industry professionals as part of the Simcoach summer showcase.</li>
+      </ul>
+      <p class="stack">Stack: Unity, C#, UX Design, Audio Systems</p>
+    </div>
+  </section>
 
-        <!-- EXPERIENCE -->
-        <section id="experience" class="section-padded">
-            <h2>Professional Experience</h2>
+  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Food Flip</h3>
+        <p>An iOS app that gamifies restaurant decision-making through a March Madness–style bracket system.</p>
+        <p class="stack">Stack: SwiftUI, Combine, CoreData, Google Places API</p>
+        <a href="https://github.com/nickpatelcs/FoodFlip" target="_blank">View on GitHub →</a>
+      </div>
 
-            <article class="exp-card">
-                <h3>U.S. Steel Corporation <span class="float-right">Jan 2025 – Dec 2025</span></h3>
-                <p class="role">Student Employee - IT</p>
-                <ul class="exp-list">
-                    <li>Built and maintained web apps supporting **Enterprise Manufacturing Solutions**.</li>
-                    <li>Participated in **Agile sprints**, delivering reliable and efficient system improvements.</li>
-                    <li>**Stack:** Java, JavaScript, SQL, Git, Agile methodology.</li>
-                </ul>
-            </article>
+      <div class="project-card">
+        <h3>RepairFlow (Team 16)</h3>
+        <p>Led a 4-person Scrum team to develop a full-stack auto repair management app for scheduling, payments, and analytics.</p>
+        <p class="stack">Stack: Django, React, PostgreSQL, Stripe API, OAuth2</p>
+        <a href="https://github.com/nickpatelcs/RepairFlow" target="_blank">View on GitHub →</a>
+      </div>
 
-            <article class="exp-card">
-                <h3>Simcoach Games <span class="float-right">Summer 2022</span></h3>
-                <p class="role">Game Development Apprentice</p>
-                <ul class="exp-list">
-                    <li>Developed a **3D first-person therapeutic game** using Unity and C# for neurodivergent patients.</li>
-                    <li>Collaborated in a 4-person team, presenting the project to local businesses and therapists.</li>
-                    <li>**Stack:** Unity, C#, Game Development.</li>
-                </ul>
-            </article>
-        </section>
+      <div class="project-card">
+        <h3>Kaizn</h3>
+        <p>A no-nonsense gym tracking app with PR notifications, weekly 1RM charts, and exercise history tracking.</p>
+        <p class="stack">Stack: SwiftUI, CoreData, Charts</p>
+      </div>
 
-        <!-- PROJECTS -->
-        <section id="projects" class="section-padded">
-            <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <article class="project-card primary-focus">
-                    <h3>Food Flip – iOS Application <span class="float-right role">Founder/Developer</span></h3>
-                    <p>Gamified restaurant decision-making app with **algorithmic tournament-based pairing system**.</p>
-                    <ul>
-                        <li>**Architecture:** MVVM + Combine for scalable reactive state management.</li>
-                        <li>**Impact:** 500+ downloads, #2 Food & Drink category.</li>
-                        <li>**Stack:** Swift, SwiftUI, CoreData, MapKit, REST APIs.</li>
-                    </ul>
-                </article>
+      <div class="project-card">
+        <h3>Custom UNIX Shell</h3>
+        <p>Developed a UNIX shell in C supporting I/O redirection, piping, signals, and background process management.</p>
+        <p class="stack">Stack: C, C++, Unix, System Programming</p>
+      </div>
+    </div>
+  </section>
 
-                <article class="project-card">
-                    <h3>Auto Shop Management Web App <span class="float-right role">CS 307 Project</span></h3>
-                    <p>Full-stack app for vehicle service scheduling with secure payment integration.</p>
-                    <ul>
-                        <li>**Backend:** Role-based access, Google OAuth 2.0, JWTs, Stripe integration.</li>
-                        <li>**Stack:** Python, Django, React, Node.js, PostgreSQL.</li>
-                    </ul>
-                </article>
+  <section id="athletics" class="section fade-in">
+    <h2>Athletics & Leadership</h2>
+    <p>
+      As an officer for <strong>Purdue Boxing</strong> and a <strong>USAPL Powerlifting</strong> competitor training for Collegiate Nationals, I’ve developed discipline, resilience, and leadership. Balancing demanding academics and athletics has honed my time management and teamwork — qualities that translate directly to software engineering.
+    </p>
+  </section>
 
-                <article class="project-card">
-                    <h3>Digital Design & Creative Assets <span class="float-right role">Graphic Designer</span></h3>
-                    <p>Visual design work for RedCup News and personal projects, emphasizing clean UI/UX and aesthetic impact.</p>
-                    <a href="https://www.instagram.com/nickpatel.edits/" target="_blank" class="project-link secondary-button"><i class="fas fa-palette"></i> View Design Work</a>
-                </article>
-            </div>
-        </section>
+  <section id="contact" class="section fade-in center">
+    <h2>Contact</h2>
+    <p>Let’s connect! I’m open to internship opportunities, collaborations, and new challenges in software development.</p>
+    <a href="mailto:pate1919@purdue.edu" class="btn">Email Me</a>
+  </section>
 
-        <!-- SKILLS -->
-        <section id="skills" class="section-padded">
-            <h2>Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skills-category">
-                    <h3>Languages</h3>
-                    <span>Swift</span><span>Python</span><span>Java</span><span>C++</span><span>C#</span><span>JavaScript</span><span>SQL</span>
-                </div>
-                <div class="skills-category">
-                    <h3>Frameworks & Tools</h3>
-                    <span>SwiftUI/UIKit</span><span>React</span><span>Django</span><span>Node.js</span><span>Unity</span><span>Git</span>
-                </div>
-                <div class="skills-category">
-                    <h3>Concepts</h3>
-                    <span>MVVM/MVC</span><span>Agile/Scrum</span><span>REST APIs</span><span>OOP</span><span>Data Structures</span>
-                </div>
-            </div>
-        </section>
+  <footer>
+    © <script>document.write(new Date().getFullYear())</script> Nicholas Patel — Designed & Built by Nick Patel.
+  </footer>
 
-        <!-- CONTACT -->
-        <section id="contact" class="section-padded">
-            <h2>Let's Connect</h2>
-            <p>Seeking Summer 2026 Software Engineering Internship opportunities. Open to full-stack and mobile development discussions.</p>
-            <div class="contact-details">
-                <p><i class="fas fa-envelope icon"></i> <a href="mailto:nicholaspateldev@gmail.com" class="email-link">nicholaspateldev@gmail.com</a></p>
-                <p><i class="fas fa-envelope icon"></i> <a href="mailto:pate1919@purdue.edu" class="email-link">pate1919@purdue.edu</a></p>
-                <p><i class="fas fa-phone-alt icon"></i> 412-874-6095</p>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2025 Nicholas Patel | <a href="https://github.com/nickpatelcs" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/nickpateldev" target="_blank">LinkedIn</a></p>
-    </footer>
-
-    <!-- Minimal JS -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
