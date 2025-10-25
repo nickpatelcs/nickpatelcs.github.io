@@ -3,159 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nicholas Patel | Software Engineer</title>
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Meta & SEO -->
-  <meta name="description" content="Portfolio of Nicholas Patel, Purdue CS student and software engineer specializing in mobile app development, full-stack systems, and high-performance C programming.">
-  <meta property="og:title" content="Nicholas Patel | Software Engineer">
-  <meta property="og:description" content="Explore projects, internships, and apps by Nicholas Patel.">
-  <meta property="og:image" content="https://yourdomain.com/preview.jpg">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#CFB991">
-
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/a2b5c9b1c1.js" crossorigin="anonymous"></script>
-
+  <title>Nicholas Patel | Aspiring Software Engineer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    html { scroll-behavior: smooth; }
-    section { scroll-margin-top: 100px; }
-    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
-    .fade-in.visible { opacity: 1; transform: none; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Navbar backdrop */
+    .navbar {
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.8);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
-
 <body class="bg-white text-gray-900 font-sans">
 
-  <!-- Floating Social Bar -->
-  <div class="hidden md:flex flex-col fixed top-1/3 left-6 space-y-4 text-gray-400 z-50">
-    <a href="https://github.com/nickpatelcs" target="_blank" class="hover:text-yellow-500"><i class="fab fa-github text-2xl"></i></a>
-    <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="hover:text-yellow-500"><i class="fab fa-linkedin text-2xl"></i></a>
-    <a href="mailto:pate1919@purdue.edu" class="hover:text-yellow-500"><i class="fas fa-envelope text-2xl"></i></a>
-  </div>
-
   <!-- Navbar -->
-  <header class="fixed w-full top-0 bg-white shadow-md z-40">
-    <nav class="flex justify-between items-center px-6 md:px-12 py-4">
-      <h1 class="font-bold text-2xl text-gray-800">Nicholas Patel</h1>
-      <button id="menu-toggle" class="md:hidden text-2xl text-gray-800"><i class="fas fa-bars"></i></button>
-      <ul id="nav-links" class="hidden md:flex space-x-8 font-medium text-gray-700">
-        <li><a href="#about" class="hover:text-yellow-500">About</a></li>
-        <li><a href="#education" class="hover:text-yellow-500">Education</a></li>
-        <li><a href="#experience" class="hover:text-yellow-500">Experience</a></li>
-        <li><a href="#projects" class="hover:text-yellow-500">Projects</a></li>
-        <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
-      </ul>
-    </nav>
-    <ul id="mobile-menu" class="hidden flex-col px-6 pb-4 space-y-3 text-lg font-medium text-gray-700 md:hidden">
-      <li><a href="#about" class="hover:text-yellow-500">About</a></li>
-      <li><a href="#education" class="hover:text-yellow-500">Education</a></li>
-      <li><a href="#experience" class="hover:text-yellow-500">Experience</a></li>
-      <li><a href="#projects" class="hover:text-yellow-500">Projects</a></li>
-      <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
-    </ul>
-  </header>
+  <nav class="navbar fixed top-0 left-0 w-full z-50 flex justify-between items-center py-4 px-6 lg:px-12 text-sm md:text-base">
+    <a href="#" class="text-xl font-semibold tracking-tight">Nicholas Patel</a>
+    <div class="space-x-4 md:space-x-6 font-medium">
+      <a href="#about" class="hover:text-yellow-600 transition">About</a>
+      <a href="#education" class="hover:text-yellow-600 transition">Education</a>
+      <a href="#experience" class="hover:text-yellow-600 transition">Experience</a>
+      <a href="#projects" class="hover:text-yellow-600 transition">Projects</a>
+      <a href="#contact" class="hover:text-yellow-600 transition">Contact</a>
+    </div>
+  </nav>
 
   <!-- Hero -->
-  <section class="pt-32 pb-20 text-center bg-gradient-to-b from-white to-gray-50">
-    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-3">Nicholas Patel</h1>
-    <div class="h-1 w-32 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto mb-6"></div>
-    <p class="text-xl text-gray-600 mb-6">Aspiring Software Engineer • Purdue University</p>
-    <a href="#projects" class="inline-block bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:-translate-y-1 hover:shadow-lg transition-all duration-300">View My Work</a>
+  <section class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-b from-yellow-400 to-yellow-600 text-white px-4">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Nicholas Patel</h1>
+    <p class="text-lg md:text-xl font-light mb-8">Aspiring Software Engineer | Mobile & Web Developer</p>
+    <a href="/Nicholas_Patel_Resume.pdf" target="_blank" class="bg-white text-yellow-600 font-semibold px-6 py-3 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl transition transform">
+      View Resume
+    </a>
   </section>
 
   <!-- About -->
-  <section id="about" class="section-padded px-6 md:px-20 py-16 fade-in">
-    <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-4 border-yellow-500 inline-block pb-2">About Me</h2>
-    <p class="text-lg text-gray-700 max-w-3xl">
-      I’m a Purdue CS student passionate about building intuitive, efficient software experiences.
-      I specialize in mobile and full-stack development, blending clean design with scalable engineering.
-      My goal is to create products that are not only powerful but delightful to use.
+  <section id="about" class="fade-in max-w-4xl mx-auto py-24 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">About Me</h2>
+    <p class="text-gray-700 leading-relaxed">
+      Hi, I’m Nicholas Patel — a Computer Science student at Purdue University passionate about software development, mobile apps, and creating meaningful technology that improves everyday experiences.
     </p>
   </section>
 
   <!-- Education -->
-  <section id="education" class="section-padded px-6 md:px-20 py-16 bg-gray-50 fade-in">
-    <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-yellow-500 inline-block pb-2">Education</h2>
-
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-500">
-        <h3 class="text-2xl font-semibold text-gray-900">Purdue University</h3>
-        <p class="text-gray-700 mt-2">B.S. in Computer Science, GPA 3.5</p>
-        <p class="text-sm text-gray-500 mt-1">Concentration: Software Engineering & Machine Learning</p>
-        <p class="text-sm text-gray-500 mt-1">Expected Graduation: May 2027</p>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-gray-400">
-        <h3 class="text-2xl font-semibold text-gray-900">Leadership & Athletics</h3>
-        <ul class="list-disc list-inside text-gray-700 text-sm mt-2 space-y-1">
-          <li>Officer, Purdue Boxing (6–7 AM training)</li>
-          <li>USAPL National Powerlifting Competitor</li>
-        </ul>
+  <section id="education" class="fade-in bg-gray-50 py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Education</h2>
+      <div class="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold">Purdue University</h3>
+        <p class="text-gray-700">Bachelor of Science in Computer Science</p>
+        <p class="text-gray-600">Expected Graduation: 2027</p>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="section-padded px-6 md:px-20 py-16 fade-in">
-    <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-yellow-500 inline-block pb-2">Experience</h2>
-
-    <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 mb-6">
-      <h3 class="text-2xl font-semibold text-gray-900">Apprentice Developer @ Simcoach Games</h3>
-      <p class="text-gray-600 text-sm mt-1">Jun 2022 – Jul 2022 | Pittsburgh, PA</p>
-      <p class="mt-4 text-gray-700">Led development of <em>Harmony Hall</em>, a Unity-based first-person therapy tool leveraging color and music for emotional awareness. Built gameplay systems in C#, collaborated with designers to enhance UX for neurodivergent users.</p>
-    </article>
-
-    <!-- Add more experiences here -->
+  <section id="experience" class="fade-in py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Experience</h2>
+      <div class="space-y-8">
+        <div class="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold">Lead Developer – Simcoach Games</h3>
+          <p class="text-gray-700 mt-2">
+            Developed <em>Harmony Hall</em>, a Unity-based first-person experience using C#, color, and music therapy to help neurodivergent patients identify emotions.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-8 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold">Founder & Developer – Food Flip</h3>
+          <p class="text-gray-700 mt-2">
+            Created an iOS app to simplify restaurant selection through a tournament-style interface using SwiftUI and the Google Places API.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section-padded px-6 md:px-20 py-16 bg-gray-50 fade-in">
-    <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-yellow-500 inline-block pb-2">Projects</h2>
-
-    <div class="grid md:grid-cols-2 gap-6">
-      <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
-        <span class="inline-block bg-yellow-500 text-white px-3 py-1 text-sm rounded-full font-semibold mb-3">Featured Project</span>
-        <h3 class="text-2xl font-semibold text-gray-900">Food Flip</h3>
-        <p class="text-gray-700 mt-2">An iOS app that helps users decide where to eat through a fun, tournament-style restaurant picker. Built with SwiftUI and Google Places API, integrating Waze, Apple Maps, and Google Maps for navigation.</p>
-      </article>
-
-      <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
-        <h3 class="text-2xl font-semibold text-gray-900">Kaizn</h3>
-        <p class="text-gray-700 mt-2">A minimalist gym tracker for serious lifters. Features RPE/RIR tracking, 1RM calculation, PR notifications, and data persistence — designed for simplicity and speed.</p>
-      </article>
+  <section id="projects" class="fade-in bg-gray-50 py-24 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Projects</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-2xl hover:-translate-y-1 transition">
+          <h3 class="font-semibold text-lg mb-2">Kaizn</h3>
+          <p class="text-gray-700 text-sm">
+            A gym tracking app that allows users to log workouts, track PRs, and visualize progress — designed with a minimal white and blue interface.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-2xl hover:-translate-y-1 transition">
+          <h3 class="font-semibold text-lg mb-2">Harmony Hall</h3>
+          <p class="text-gray-700 text-sm">
+            A therapeutic Unity game using sound and color to enhance emotional awareness for neurodivergent users.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl shadow-md p-6 hover:shadow-2xl hover:-translate-y-1 transition">
+          <h3 class="font-semibold text-lg mb-2">Food Flip</h3>
+          <p class="text-gray-700 text-sm">
+            A decision-making app that helps users choose where to eat through a fun, bracket-style interface.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section-padded px-6 md:px-20 py-16 text-center fade-in">
-    <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-4 border-yellow-500 inline-block pb-2">Contact</h2>
-    <p class="text-lg text-gray-700 mb-6">Let’s connect! I’m open to software engineering internships and collaborations.</p>
+  <section id="contact" class="fade-in py-24 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+    <p class="text-gray-700 mb-8">Let’s connect and create something great together.</p>
     <div class="space-x-6">
-      <a href="mailto:pate1919@purdue.edu" class="bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:-translate-y-1 hover:shadow-lg transition-all duration-300">Email Me</a>
-      <a href="NicholasPatel_Resume.pdf" class="underline text-gray-800 hover:text-yellow-500">View Résumé</a>
+      <a href="mailto:nickpatel@purdue.edu" class="text-yellow-600 hover:underline">Email</a>
+      <a href="https://github.com/nickpatelcs" target="_blank" class="text-yellow-600 hover:underline">GitHub</a>
+      <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="text-yellow-600 hover:underline">LinkedIn</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 text-center text-gray-600 border-t border-gray-200">
-    <p>© 2025 Nicholas Patel. Built with ❤️ and Tailwind CSS.</p>
+  <footer class="text-center py-8 text-gray-500 text-sm border-t">
+    © 2025 Nicholas Patel. All Rights Reserved.
   </footer>
 
-  <!-- Fade-in Observer & Mobile Menu -->
+  <!-- Scroll + Fade-in Script -->
   <script>
+    const sections = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
 
-    document.getElementById('menu-toggle').onclick = () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    };
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) navbar.classList.add('scrolled');
+      else navbar.classList.remove('scrolled');
+    });
   </script>
 
 </body>
