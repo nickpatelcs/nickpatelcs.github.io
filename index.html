@@ -52,11 +52,9 @@
             <div class="flex items-center space-x-4">
                 <!-- Dark Mode Toggle Button -->
                 <!-- THIS IS THE TOGGLE: It is visible on all screen sizes -->
-                <button id="theme-toggle" 
-        class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200" 
-        aria-label="Toggle Dark Mode">
-    <i id="theme-icon" class="fas fa-sun text-yellow-500 dark:text-yellow-400 text-xl"></i>
-</button>
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200" aria-label="Toggle Dark Mode">
+                    <i id="theme-icon" class="fas fa-sun text-xl text-yellow-500"></i>
+                </button>
 
                 <button id="menu-toggle" class="md:hidden text-2xl text-gray-800 dark:text-white"><i class="fas fa-bars"></i></button>
             </div>
@@ -438,7 +436,8 @@
   };
 
   // Apply stored theme on page load
-  setTheme(localStorage.getItem('theme'));
+  //setTheme(localStorage.getItem('theme'));
+        setTheme('light');
 
   // Toggle theme on button click
   themeToggle.addEventListener('click', () => {
