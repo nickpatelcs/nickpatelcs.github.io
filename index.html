@@ -16,11 +16,9 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#CFB991">
 
-    <!-- Icons - CRITICAL FOR TOGGLE VISIBILITY -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/a2b5c9b1c1.js" crossorigin="anonymous"></script>
+
     <style>
         /* Custom Styles for Sleek Design */
         html { scroll-behavior: smooth; }
@@ -28,38 +26,26 @@
         .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
         .fade-in.visible { opacity: 1; transform: none; }
         .skill-tag {
-            /* Updated for dark mode readability */
-            @apply inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium shadow-sm hover:bg-yellow-100 transition duration-200 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-yellow-700 dark:hover:text-white;
+            @apply inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm font-medium shadow-sm hover:bg-yellow-100 transition duration-200;
         }
     </style>
 </head>
 
-<!-- Body class updated to manage base colors for both modes -->
-<body class="bg-white text-gray-900 font-sans transition-colors duration-500 dark:bg-gray-900 dark:text-gray-100">
+<body class="bg-white text-gray-900 font-sans">
 
     <!-- Floating Social Bar -->
     <div class="hidden md:flex flex-col fixed top-1/3 left-6 space-y-4 text-gray-400 z-50">
-        <a href="https://github.com/nickpatelcs" target="_blank" class="hover:text-yellow-500 transition duration-300" aria-label="GitHub Profile"><i class="fab fa-github text-2xl"></i></a>
+        <a href="https://github.com/nickpateldev" target="_blank" class="hover:text-yellow-500 transition duration-300" aria-label="GitHub Profile"><i class="fab fa-github text-2xl"></i></a>
         <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="hover:text-yellow-500 transition duration-300" aria-label="LinkedIn Profile"><i class="fab fa-linkedin text-2xl"></i></a>
         <a href="mailto:pate1919@purdue.edu" class="hover:text-yellow-500 transition duration-300" aria-label="Email Nicholas Patel"><i class="fas fa-envelope text-2xl"></i></a>
     </div>
 
     <!-- Navbar -->
-    <header class="fixed w-full top-0 bg-white shadow-md z-40 transition-colors duration-500 dark:bg-gray-800 dark:shadow-xl">
+    <header class="fixed w-full top-0 bg-white shadow-md z-40">
         <nav class="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 py-4">
-            <h1 class="font-bold text-2xl text-gray-800 dark:text-white">Nicholas Patel</h1>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Dark Mode Toggle Button -->
-                <!-- THIS IS THE TOGGLE: It is visible on all screen sizes -->
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200" aria-label="Toggle Dark Mode">
-                    <i id="theme-icon" class="fas fa-sun text-xl text-yellow-500"></i>
-                </button>
-
-                <button id="menu-toggle" class="md:hidden text-2xl text-gray-800 dark:text-white"><i class="fas fa-bars"></i></button>
-            </div>
-
-            <ul id="nav-links" class="hidden md:flex space-x-8 font-medium text-gray-700 dark:text-gray-300">
+            <h1 class="font-bold text-2xl text-gray-800">Nicholas Patel</h1>
+            <button id="menu-toggle" class="md:hidden text-2xl text-gray-800"><i class="fas fa-bars"></i></button>
+            <ul id="nav-links" class="hidden md:flex space-x-8 font-medium text-gray-700">
                 <li><a href="#about" class="hover:text-yellow-500 transition duration-200">About</a></li>
                 <li><a href="#education" class="hover:text-yellow-500 transition duration-200">Education</a></li>
                 <li><a href="#experience" class="hover:text-yellow-500 transition duration-200">Experience</a></li>
@@ -69,7 +55,7 @@
                 <li><a href="#contact" class="hover:text-yellow-500 transition duration-200">Contact</a></li>
             </ul>
         </nav>
-        <ul id="mobile-menu" class="hidden flex-col px-6 pb-4 space-y-3 text-lg font-medium text-gray-700 dark:text-gray-300 md:hidden bg-white shadow-inner dark:bg-gray-800 dark:shadow-gray-700">
+        <ul id="mobile-menu" class="hidden flex-col px-6 pb-4 space-y-3 text-lg font-medium text-gray-700 md:hidden bg-white shadow-inner">
             <li><a href="#about" class="hover:text-yellow-500">About</a></li>
             <li><a href="#education" class="hover:text-yellow-500">Education</a></li>
             <li><a href="#experience" class="hover:text-yellow-500">Experience</a></li>
@@ -82,17 +68,16 @@
 
     <main class="max-w-7xl mx-auto">
         <!-- Hero -->
-        <!-- Background transition added -->
-        <section class="pt-32 pb-20 px-6 md:px-12 text-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 transition-colors duration-500">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-3">Nicholas Patel</h1>
+        <section class="pt-32 pb-20 px-6 md:px-12 text-center bg-gradient-to-b from-white to-gray-50">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-3">Nicholas Patel</h1>
             <div class="h-1 w-32 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full mx-auto mb-6"></div>
-            <p class="text-xl text-gray-600 dark:text-gray-300 mb-6">Purdue CS Student • Aspiring Software Engineer • Mobile & Full-Stack Focus</p>
+            <p class="text-xl text-gray-600 mb-6">Purdue CS Student • Aspiring Software Engineer • Mobile & Full-Stack Focus</p>
             
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" class="inline-block bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 min-w-40 dark:bg-yellow-400 dark:text-gray-900 dark:hover:bg-yellow-300">
+                <a href="#projects" class="inline-block bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 min-w-40">
                     <i class="fas fa-code mr-2"></i> View My Work
                 </a>
-                <a href="/Nicholas_Patel_Resume.pdf" download class="inline-block border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-all duration-300 min-w-40 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-gray-900">
+                <a href="/Nicholas_Patel_Resume.pdf" download class="inline-block border-2 border-gray-900 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 hover:text-white transition-all duration-300 min-w-40">
                     <i class="fas fa-download mr-2"></i> Download Résumé
                 </a>
             </div>
@@ -100,8 +85,8 @@
 
         <!-- About -->
         <section id="about" class="px-6 md:px-12 py-16 fade-in">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b-4 border-yellow-500 inline-block pb-2">About Me</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 max-w-4xl leading-relaxed">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-4 border-yellow-500 inline-block pb-2">About Me</h2>
+            <p class="text-lg text-gray-700 max-w-4xl leading-relaxed">
                 I am a highly driven **Software Engineer** focused on **Mobile (Swift/iOS) and Full-Stack Development**. I translate complex systems into efficient code, combining technical depth (MVVM, Agile) with cross-functional leadership and disciplined execution.
                 <br><br>
                 My projects reflect a commitment to building scalable and delightful user experiences, from launching a successful iOS app (Food Flip) to implementing low-level systems programming concepts in C. My coursework and a 3.5 GPA demonstrate technical mastery, while my commitment to high-intensity training in Purdue Boxing and Powerlifting showcases exceptional **commitment, time management**, and the discipline required for long-term project success.
@@ -109,23 +94,20 @@
         </section>
 
         <!-- Education -->
-        <!-- Background transition added -->
-        <section id="education" class="px-6 md:px-12 py-16 bg-gray-50 dark:bg-gray-900 fade-in transition-colors duration-500">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 border-b-4 border-yellow-500 inline-block pb-2">Education & Dedication</h2>
+        <section id="education" class="px-6 md:px-12 py-16 bg-gray-50 fade-in">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-yellow-500 inline-block pb-2">Education & Dedication</h2>
 
             <div class="grid md:grid-cols-2 gap-6">
-                <!-- Card background updated -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-500 dark:bg-gray-800 dark:shadow-xl">
-                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Purdue University</h3>
-                    <p class="text-gray-700 dark:text-gray-300 mt-2 text-xl font-medium">B.S. in Computer Science</p>
-                    <p class="text-md text-gray-600 dark:text-gray-400 mt-1">GPA: 3.5/4.0 | Expected Graduation: May 2027</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Concentrations: **Software Engineering** and **Machine Learning**.</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-500">
+                    <h3 class="text-2xl font-semibold text-gray-900">Purdue University</h3>
+                    <p class="text-gray-700 mt-2 text-xl font-medium">B.S. in Computer Science</p>
+                    <p class="text-md text-gray-600 mt-1">GPA: 3.5/4.0 | Expected Graduation: May 2027</p>
+                    <p class="text-sm text-gray-500 mt-2">Concentrations: **Software Engineering** and **Machine Learning**.</p>
                 </div>
 
-                <!-- Card background updated -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-gray-400 dark:bg-gray-800 dark:shadow-xl">
-                    <h3 class="text-2xl font-semibold text-gray-900 dark:text-white mb-3">Leadership & Discipline</h3>
-                    <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-gray-400">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-3">Leadership & Discipline</h3>
+                    <ul class="space-y-3 text-gray-700">
                         <li class="flex items-start">
                             <i class="fas fa-hand-rock text-yellow-500 text-xl mr-3 mt-1"></i>
                             <div class="flex-1">
@@ -145,18 +127,17 @@
 
         <!-- Core Professional Experience (Internships & Technical Roles) -->
         <section id="experience" class="px-6 md:px-12 py-16 fade-in">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 border-b-4 border-yellow-500 inline-block pb-2">Professional Experience</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-yellow-500 inline-block pb-2">Professional Experience</h2>
 
             <div class="grid lg:grid-cols-2 gap-6">
                 <!-- U.S. Steel Corporation (IT Intern) -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-600 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-600">
                     <div class="flex justify-between items-center mb-1">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">U.S. Steel Corporation</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Jan. 2025 – Present</span>
+                        <h3 class="text-xl font-semibold text-gray-900">U.S. Steel Corporation</h3>
+                        <span class="text-sm text-gray-500 font-medium">Jan. 2025 – Present</span>
                     </div>
                     <p class="text-blue-600 font-medium mb-3">Student Intern - IT (Enterprise Manufacturing Solutions)</p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm">
                         <li>Developed and maintained a critical **Java/JavaScript web application** for tracking and managing steel inventory within the Supply Chain team.</li>
                         <li>Executed end-to-end **SDLC processes**, including configuration, testing, and deployment of features in an Agile environment.</li>
                         <li>**Stack:** Java (Apache Tomcat), JavaScript, SQL (Toad), Agile, Git.</li>
@@ -164,14 +145,13 @@
                 </article>
 
                 <!-- NEW: Graphic Designer, RedCupNews -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-red-500 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-red-500">
                     <div class="flex justify-between items-center mb-1">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">RedCupNews (Purdue Branch)</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Aug 2024 – Present</span>
+                        <h3 class="text-xl font-semibold text-gray-900">RedCupNews (Purdue Branch)</h3>
+                        <span class="text-sm text-gray-500 font-medium">Aug 2024 – Present</span>
                     </div>
                     <p class="text-red-500 font-medium mb-3">Graphic Designer | Video Editor & Visuals Creator</p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm">
                         <li>Executes professional **video editing** for digital news segments using **DaVinci Resolve**.</li>
                         <li>Designs high-impact **gameday graphics** and various visual assets utilizing the **Adobe Creative Suite**.</li>
                         <li>Ensures brand consistency and quality across all digital media platforms for the Purdue branch.</li>
@@ -179,28 +159,26 @@
                 </article>
 
                 <!-- Simcoach Games -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-green-600 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-green-600">
                     <div class="flex justify-between items-center mb-1">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Simcoach Games</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Jun 2022 - Jul 2022</span>
+                        <h3 class="text-xl font-semibold text-gray-900">Simcoach Games</h3>
+                        <span class="text-sm text-gray-500 font-medium">Jun 2022 - Jul 2022</span>
                     </div>
                     <p class="text-green-600 font-medium mb-3">Apprentice Developer / Lead Developer</p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm">
                         <li>Led development of *Harmony Hall*, an interactive **3D therapeutic game** (Unity/C#), serving as the **Lead Developer** for all player movements and special effects.</li>
                         <li>Collaborated in a four-member team through conceptualization, design, and development, culminating in a public presentation.</li>
                     </ul>
                 </article>
 
                 <!-- Technology Leadership Initiative -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-600 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-600">
                     <div class="flex justify-between items-center mb-1">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">University of Pittsburgh</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Jul 2022</span>
+                        <h3 class="text-xl font-semibold text-gray-900">University of Pittsburgh</h3>
+                        <span class="text-sm text-gray-500 font-medium">Jul 2022</span>
                     </div>
                     <p class="text-purple-600 font-medium mb-3">Technology Leadership Initiative Internship</p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm">
                         <li>Intensive multi-week program exploring hardware, OS, big data, **web design**, and mobile application development.</li>
                         <li>Culminated in a group collaboration to **create a custom web application**, building foundational skills in **Project Management** and Human-Computer Interaction.</li>
                     </ul>
@@ -208,49 +186,46 @@
             </div>
         </section>
         
-        <!-- Customer-Facing/Service Roles -->
-        <!-- Background transition added -->
-        <section id="service-roles" class="px-6 md:px-12 py-16 bg-gray-50 dark:bg-gray-900 fade-in transition-colors duration-500">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 border-b-4 border-yellow-500 inline-block pb-2">Customer-Facing & Transferable Roles</h2>
+        <!-- UPDATED: Customer-Facing/Service Roles -->
+        <section id="service-roles" class="px-6 md:px-12 py-16 bg-gray-50 fade-in">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-yellow-500 inline-block pb-2">Customer-Facing & Transferable Roles</h2>
 
             <div class="grid lg:grid-cols-3 gap-6">
                 <!-- Delivery Installation Technician -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 border-l-4 border-yellow-600 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 border-l-4 border-yellow-600">
                     <div class="flex justify-between items-center mb-1">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Field & Technical Services</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">May 2023 – Jul 2024</span>
+                        <!-- Used a descriptive title since no specific company name was provided -->
+                        <h3 class="text-xl font-semibold text-gray-900">Field & Technical Services</h3>
+                        <span class="text-sm text-gray-500 font-medium">May 2023 – Jul 2024</span>
                     </div>
                     <p class="text-yellow-600 font-medium mb-3">Delivery Installation Technician</p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm mt-4">
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm mt-4">
                         <li>Managed logistics and performed precise technical installations at client locations, emphasizing **attention to detail**.</li>
                         <li>Maintained high **customer satisfaction** through clear communication and professional problem-solving on-site.</li>
                     </ul>
                 </article>
                 
                 <!-- Baker at Portmans Deli -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 border-l-4 border-yellow-600 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 border-l-4 border-yellow-600">
                     <div class="flex justify-between items-center mb-1">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Portmans Deli</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Sep 2022 – May 2023</span>
+                        <h3 class="text-xl font-semibold text-gray-900">Portmans Deli</h3>
+                        <span class="text-sm text-gray-500 font-medium">Sep 2022 – May 2023</span>
                     </div>
                     <p class="text-yellow-600 font-medium mb-3">Baker</p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm mt-4">
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm mt-4">
                         <li>Executed time-sensitive food production schedules, demonstrating a reliable and **strong work ethic** in a fast-paced environment.</li>
                         <li>Managed inventory and adhered to strict quality control standards for baked goods.</li>
                     </ul>
                 </article>
 
                 <!-- Barista at NRGize Cafe -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 border-l-4 border-yellow-600 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-0.5 hover:shadow-xl transition-all duration-300 border-l-4 border-yellow-600">
                     <div class="flex justify-between items-center mb-1">
-                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">NRGize Cafe</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Jan 2022 – Sep 2022</span>
+                        <h3 class="text-xl font-semibold text-gray-900">NRGize Cafe</h3>
+                        <span class="text-sm text-gray-500 font-medium">Jan 2022 – Sep 2022</span>
                     </div>
                     <p class="text-yellow-600 font-medium mb-3">Barista</p>
-                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 dark:text-gray-300 text-sm mt-4">
+                    <ul class="list-disc list-outside ml-5 space-y-2 text-gray-700 text-sm mt-4">
                         <li>Provided friendly, efficient service to a high volume of customers, managing cash and processing orders accurately.</li>
                         <li>Quickly learned new processes and trained junior staff on customer service and product preparation.</li>
                     </ul>
@@ -260,13 +235,12 @@
 
         <!-- Skills -->
         <section id="skills" class="px-6 md:px-12 py-16 fade-in">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 border-b-4 border-yellow-500 inline-block pb-2">Technical Skills</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-yellow-500 inline-block pb-2">Technical Skills</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
                 <!-- Core Programming & Systems -->
-                <!-- Card background updated -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-gray-700 dark:bg-gray-800 dark:shadow-xl">
-                    <h3 class="text-xl font-bold text-gray-700 dark:text-gray-300 mb-3">Core & Systems</h3>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-gray-700">
+                    <h3 class="text-xl font-bold text-gray-700 mb-3">Core & Systems</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">C/C++</span><span class="skill-tag">Swift</span><span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Objective-C</span>
                         <span class="skill-tag">Linux/UNIX</span><span class="skill-tag">Malloc/Free</span><span class="skill-tag">Flex/Bison</span>
@@ -274,8 +248,7 @@
                 </div>
 
                 <!-- Frameworks & Application Development -->
-                <!-- Card background updated -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-blue-600 dark:bg-gray-800 dark:shadow-xl">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-blue-600">
                     <h3 class="text-xl font-bold text-blue-600 mb-3">Frameworks & App Dev</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">SwiftUI</span><span class="skill-tag">React.js</span><span class="skill-tag">Django</span><span class="skill-tag">Unity</span><span class="skill-tag">MVVM/MVC</span><span class="skill-tag">iOS Development</span>
@@ -284,8 +257,7 @@
                 </div>
 
                 <!-- Databases & Tools -->
-                <!-- Card background updated -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-green-600 dark:bg-gray-800 dark:shadow-xl">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-green-600">
                     <h3 class="text-xl font-bold text-green-600 mb-3">Data & Tools</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">SQL/PostgreSQL</span><span class="skill-tag">CoreData</span><span class="skill-tag">Git/GitHub</span><span class="skill-tag">Agile/Scrum</span>
@@ -294,8 +266,7 @@
                 </div>
 
                 <!-- Design & Soft Skills -->
-                <!-- Card background updated -->
-                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-red-500 dark:bg-gray-800 dark:shadow-xl">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg border-t-4 border-red-500">
                     <h3 class="text-xl font-bold text-red-500 mb-3">Design & Soft Skills</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">DaVinci Resolve</span><span class="skill-tag">Adobe Creative Suite</span><span class="skill-tag">Project Management</span><span class="skill-tag">UX/UI Design</span><span class="skill-tag">Public Speaking</span>
@@ -306,65 +277,60 @@
         </section>
 
         <!-- Projects -->
-        <!-- Background transition added -->
-        <section id="projects" class="px-6 md:px-12 py-16 bg-gray-50 dark:bg-gray-900 fade-in transition-colors duration-500">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 border-b-4 border-yellow-500 inline-block pb-2">Signature Projects</h2>
+        <section id="projects" class="px-6 md:px-12 py-16 bg-gray-50 fade-in">
+            <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-yellow-500 inline-block pb-2">Signature Projects</h2>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- PROJECT 1: Food Flip (iOS) -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-red-500 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-red-500">
                     <div class="flex justify-between items-center mb-3">
-                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Food Flip – iOS App</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">SwiftUI/MVVM</span>
+                        <h3 class="text-2xl font-semibold text-gray-900">Food Flip – iOS App</h3>
+                        <span class="text-sm text-gray-500 font-medium">SwiftUI/MVVM</span>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-4">Independently developed app that **gamifies restaurant decision-making** using a tournament-based pairing system with the Google Places API.</p>
-                    <ul class="list-disc list-outside ml-5 space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                    <p class="text-gray-700 mb-4">Independently developed app that **gamifies restaurant decision-making** using a tournament-based pairing system with the Google Places API.</p>
+                    <ul class="list-disc list-outside ml-5 space-y-1 text-gray-600 text-sm">
                         <li>**Impact:** Reached **#2 in the Food & Drink category** on the App Store with 500+ downloads.</li>
                         <li>**Architecture:** Engineered a modular **MVVM architecture** with Combine for reactive state management.</li>
                     </ul>
-                    <a href="https://apple.co/40zhMzE" target="_blank" class="mt-4 inline-flex items-center text-red-600 hover:text-yellow-500 font-semibold transition duration-200 dark:text-red-400">
+                    <a href="https://apple.co/40zhMzE" target="_blank" class="mt-4 inline-flex items-center text-red-600 hover:text-yellow-500 font-semibold transition duration-200">
                         <i class="fab fa-apple mr-2"></i> View on App Store
                     </a>
                 </article>
 
                 <!-- PROJECT 2: RepairFlow (CS 307) -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-indigo-600 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-indigo-600">
                     <div class="flex justify-between items-center mb-3">
-                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">RepairFlow – Auto Shop Web App</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">Django/React/Stripe</span>
+                        <h3 class="text-2xl font-semibold text-gray-900">RepairFlow – Auto Shop Web App</h3>
+                        <span class="text-sm text-gray-500 font-medium">Django/React/Stripe</span>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-4">Captsone project for CS 307. Full-stack platform for appointment scheduling and shop management.</p>
-                    <ul class="list-disc list-outside ml-5 space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                    <p class="text-gray-700 mb-4">Captsone project for CS 307. Full-stack platform for appointment scheduling and shop management.</p>
+                    <ul class="list-disc list-outside ml-5 space-y-1 text-gray-600 text-sm">
                         <li>**Leadership:** Managed a **four-person Scrum team** as the Scrum Master, ensuring high velocity and project alignment.</li>
                         <li>**Security:** Implemented **Role-Based Access Control (RBAC)** secured by Google OAuth 2.0 and JWTs.</li>
                     </ul>
                 </article>
 
                 <!-- PROJECT 3: Custom C Heap Memory Allocator -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-teal-600 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-teal-600">
                     <div class="flex justify-between items-center mb-3">
-                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">C Heap Memory Allocator</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">C/Systems Programming</span>
+                        <h3 class="text-2xl font-semibold text-gray-900">C Heap Memory Allocator</h3>
+                        <span class="text-sm text-gray-500 font-medium">C/Systems Programming</span>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-4">High-performance custom implementation of `malloc`, `free`, `calloc`, and `realloc` for CS 252.</p>
-                    <ul class="list-disc list-outside ml-5 space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                    <p class="text-gray-700 mb-4">High-performance custom implementation of `malloc`, `free`, `calloc`, and `realloc` for CS 252.</p>
+                    <ul class="list-disc list-outside ml-5 space-y-1 text-gray-600 text-sm">
                         <li>**Efficiency:** Developed a **Segregated Free List system** and used low-level **pointer arithmetic** to enforce block alignment.</li>
                         <li>**Fragmentation:** Implemented **Boundary Tags** for $O(1)$ lookup and **coalescing of free blocks** to fight external fragmentation.</li>
                     </ul>
                 </article>
 
                 <!-- PROJECT 4: UNIX Custom Shell Implementation -->
-                <!-- Card background updated -->
-                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-yellow-800 dark:bg-gray-800 dark:hover:shadow-3xl">
+                <article class="bg-white p-6 rounded-xl shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border-l-4 border-yellow-800">
                     <div class="flex justify-between items-center mb-3">
-                        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">UNIX Custom Shell</h3>
-                        <span class="text-sm text-gray-500 dark:text-gray-400 font-medium">C/Flex/Bison</span>
+                        <h3 class="text-2xl font-semibold text-gray-900">UNIX Custom Shell</h3>
+                        <span class="text-sm text-gray-500 font-medium">C/Flex/Bison</span>
                     </div>
-                    <p class="text-gray-700 dark:text-gray-300 mb-4">Feature-rich, custom shell interpreter in C/C++ combining functionality similar to bash and csh.</p>
-                    <ul class="list-disc list-outside ml-5 space-y-1 text-gray-600 dark:text-gray-400 text-sm">
+                    <p class="text-gray-700 mb-4">Feature-rich, custom shell interpreter in C/C++ combining functionality similar to bash and csh.</p>
+                    <ul class="list-disc list-outside ml-5 space-y-1 text-gray-600 text-sm">
                         <li>**Parsing:** Developed the shell's grammar using **Flex (Lex) and Bison (Yacc)** to support complex I/O redirection and piping.</li>
                         <li>**Process Control:** Implemented core execution using **`fork()` and `execvp()`**, managing signal handlers to prevent zombie processes.</li>
                     </ul>
@@ -374,25 +340,25 @@
 
         <!-- Contact -->
         <section id="contact" class="px-6 md:px-12 py-16 text-center fade-in">
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6 border-b-4 border-yellow-500 inline-block pb-2">Let's Connect</h2>
-            <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">I am actively seeking **Summer 2026 Software Engineering Internship** opportunities. I welcome discussions about mobile architecture, full-stack systems, and collaborative projects. Feel free to reach out directly!</p>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-4 border-yellow-500 inline-block pb-2">Let's Connect</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">I am actively seeking **Summer 2026 Software Engineering Internship** opportunities. I welcome discussions about mobile architecture, full-stack systems, and collaborative projects. Feel free to reach out directly!</p>
             <div class="space-y-4 md:space-y-0 md:space-x-8 text-lg font-medium">
-                <p class="text-gray-800 dark:text-gray-200"><i class="fas fa-envelope mr-3 text-yellow-500"></i> <a href="mailto:pate1919@purdue.edu" class="hover:text-yellow-500 transition duration-200">pate1919@purdue.edu</a></p>
-                <p class="text-gray-800 dark:text-gray-200"><i class="fas fa-phone-alt mr-3 text-yellow-500"></i> 412-874-6095</p>
+                <p class="text-gray-800"><i class="fas fa-envelope mr-3 text-yellow-500"></i> <a href="mailto:pate1919@purdue.edu" class="hover:text-yellow-500 transition duration-200">pate1919@purdue.edu</a></p>
+                <p class="text-gray-800"><i class="fas fa-phone-alt mr-3 text-yellow-500"></i> 412-874-6095</p>
                 <div class="flex justify-center space-x-6 mt-4">
                     <a href="https://linkedin.com/in/nickpateldev" target="_blank" class="text-blue-700 hover:text-yellow-500 text-3xl transition duration-200" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/nickpateldev" target="_blank" class="text-gray-900 dark:text-white hover:text-yellow-500 text-3xl transition duration-200" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://github.com/nickpateldev" target="_blank" class="text-gray-900 hover:text-yellow-500 text-3xl transition duration-200" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="py-6 text-center text-gray-600 border-t border-gray-200 dark:text-gray-400 dark:border-gray-700">
+    <footer class="py-6 text-center text-gray-600 border-t border-gray-200">
         <p>© 2025 Nicholas Patel. Built with ❤️ and Tailwind CSS.</p>
     </footer>
 
-    <!-- Fade-in Observer & Dark Mode Logic -->
+    <!-- Fade-in Observer & Mobile Menu -->
     <script>
         // Intersection Observer for fade-in effect on scroll
         const observer = new IntersectionObserver(entries => {
@@ -414,10 +380,7 @@
                 mobileMenu.classList.add('hidden');
             };
         });
-
-</script>
-
-
+    </script>
 
 </body>
 </html>
