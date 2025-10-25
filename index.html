@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#CFB991">
 
-    <!-- Icons -->
+    <!-- Icons - CRITICAL FOR TOGGLE VISIBILITY -->
     <script src="https://kit.fontawesome.com/a2b5c9b1c1.js" crossorigin="anonymous"></script>
 
     <style>
@@ -49,6 +49,7 @@
             
             <div class="flex items-center space-x-4">
                 <!-- Dark Mode Toggle Button -->
+                <!-- THIS IS THE TOGGLE: It is visible on all screen sizes -->
                 <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200" aria-label="Toggle Dark Mode">
                     <i id="theme-icon" class="fas fa-sun text-xl text-yellow-500"></i>
                 </button>
@@ -423,13 +424,13 @@
         function setTheme(theme) {
             if (theme === DARK_MODE) {
                 body.classList.add(DARK_MODE);
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
+                themeIcon.classList.remove('fa-sun', 'text-yellow-500');
+                themeIcon.classList.add('fa-moon', 'text-yellow-400'); // Use yellow-400 for contrast in dark mode
                 localStorage.setItem('theme', DARK_MODE);
             } else {
                 body.classList.remove(DARK_MODE);
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
+                themeIcon.classList.remove('fa-moon', 'text-yellow-400');
+                themeIcon.classList.add('fa-sun', 'text-yellow-500'); // Use yellow-500 for contrast in light mode
                 localStorage.setItem('theme', LIGHT_MODE);
             }
         }
