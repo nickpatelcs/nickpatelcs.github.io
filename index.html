@@ -52,9 +52,11 @@
             <div class="flex items-center space-x-4">
                 <!-- Dark Mode Toggle Button -->
                 <!-- THIS IS THE TOGGLE: It is visible on all screen sizes -->
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-200" aria-label="Toggle Dark Mode">
-                    <i id="theme-icon" class="fas fa-sun text-xl text-yellow-500"></i>
-                </button>
+                <button id="theme-toggle" 
+        class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200" 
+        aria-label="Toggle Dark Mode">
+    <i id="theme-icon" class="fas fa-sun text-yellow-500 dark:text-yellow-400 text-xl"></i>
+</button>
 
                 <button id="menu-toggle" class="md:hidden text-2xl text-gray-800 dark:text-white"><i class="fas fa-bars"></i></button>
             </div>
@@ -415,71 +417,37 @@
             };
         });
 
-        // Dark Mode Implementation
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const body = document.body;
-        const LIGHT_MODE = 'light';
-        const DARK_MODE = 'dark';
-
-        // Function to set the theme
-        function setTheme(theme) {
-            if (theme === DARK_MODE) {
-                body.classList.add(DARK_MODE);
-                themeIcon.classList.remove('fa-sun', 'text-yellow-500');
-                themeIcon.classList.add('fa-moon', 'text-yellow-400'); // Use yellow-400 for contrast in dark mode
-                localStorage.setItem('theme', DARK_MODE);
-            } else {
-                body.classList.remove(DARK_MODE);
-                themeIcon.classList.remove('fa-moon', 'text-yellow-400');
-                themeIcon.classList.add('fa-sun', 'text-yellow-500'); // Use yellow-500 for contrast in light mode
-                localStorage.setItem('theme', LIGHT_MODE);
-            }
-        }
-
-        // Check for saved theme preference on page load
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            // Check OS preference if no preference is saved
-            setTheme(DARK_MODE);
-        } else {
-            setTheme(LIGHT_MODE);
-        }
-
-        // Listener for the toggle button
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = body.classList.contains(DARK_MODE) ? DARK_MODE : LIGHT_MODE;
-            const newTheme = currentTheme === LIGHT_MODE ? DARK_MODE : LIGHT_MODE;
-            setTheme(newTheme);
-        });
-    </script>
-
-    <script>
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
-  const html = document.documentElement;
 
-  // Load saved theme
-  if (localStorage.theme === 'dark') {
-    html.classList.add('dark');
-    themeIcon.classList.replace('fa-sun', 'fa-moon');
+  // Default to light mode
+  if (!localStorage.getItem('theme')) {
+    localStorage.setItem('theme', 'light');
   }
 
-  themeToggle.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    const darkMode = html.classList.contains('dark');
-
-    if (darkMode) {
-      themeIcon.classList.replace('fa-sun', 'fa-moon');
-      localStorage.theme = 'light';
+  const setTheme = (theme) => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
     } else {
-      themeIcon.classList.replace('fa-moon', 'fa-sun');
-      localStorage.theme = 'light';
+      document.documentElement.classList.remove('dark');
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
     }
+  };
+
+  // Apply stored theme on page load
+  setTheme(localStorage.getItem('theme'));
+
+  // Toggle theme on button click
+  themeToggle.addEventListener('click', () => {
+    const current = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', current);
+    setTheme(current);
   });
 </script>
+
 
 
 </body>
