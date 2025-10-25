@@ -415,36 +415,6 @@
             };
         });
 
-  const themeToggle = document.getElementById('theme-toggle');
-  const themeIcon = document.getElementById('theme-icon');
-
-  // Default to light mode
-  if (!localStorage.getItem('theme')) {
-    localStorage.setItem('theme', 'light');
-  }
-
-  const setTheme = (theme) => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      themeIcon.classList.remove('fa-sun');
-      themeIcon.classList.add('fa-moon');
-    } else {
-      document.documentElement.classList.remove('dark');
-      themeIcon.classList.remove('fa-moon');
-      themeIcon.classList.add('fa-sun');
-    }
-  };
-
-  // Apply stored theme on page load
-  //setTheme(localStorage.getItem('theme'));
-        setTheme('light');
-
-  // Toggle theme on button click
-  themeToggle.addEventListener('click', () => {
-    const current = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', current);
-    setTheme(current);
-  });
 </script>
 
 
